@@ -15,8 +15,8 @@ void on_off_switch_init(void)
 	GPIO_PORTB_DEN_R |= (1<<0);
 	GPIO_PORTB_PUR_R   |= (1<<0);
 	GPIO_PORTB_IS_R    &= ~(1<<0);      /* PB0 detect edges */
-  GPIO_PORTB_IBE_R   &= ~(1<<0);      /* PD1 will detect a certain edge */
-  GPIO_PORTB_IEV_R   &= ~(1<<0);      /* PD1 will detect a falling edge */
+  GPIO_PORTB_IBE_R   |= (1<<0);      /* PD1 will detect a certain edge */
+  //GPIO_PORTB_IEV_R   &= ~(1<<0);      /* PD1 will detect a falling edge */
   GPIO_PORTB_ICR_R   |= (1<<0);       /* Clear Trigger flag for PB0 (Interupt Flag) */
   GPIO_PORTB_IM_R    |= (1<<0);       /* Enable Interrupt on PB0 pin */
   /* Set GPIO PORTB priotiy as 2 by set Bit number 15, 14 and 13c with value 2 */

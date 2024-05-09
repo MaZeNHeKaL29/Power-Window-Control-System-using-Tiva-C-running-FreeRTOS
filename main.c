@@ -167,8 +167,8 @@ static void vWindowUpPassengerTask( void *pvParameters )
 	
         xSemaphoreTake( xWindowUpPassengerBinarySemaphore, portMAX_DELAY );
 			
-				if(!window_locked)
-				{
+				if(on_off_switch_on())
+		{
 						
 					move_motor_up();
 				
@@ -197,7 +197,7 @@ static void vWindowDownPassengerTask( void *pvParameters )
 	
         xSemaphoreTake( xWindowDownPassengerBinarySemaphore, portMAX_DELAY );
 			
-				if(!window_locked)
+				if(on_off_switch_on())
 				{
 					move_motor_down();
 				
@@ -321,16 +321,6 @@ static void vWindowLockTask( void *pvParameters )
 			
 			
 				make_motor_stop();
-			
-			
-				if(!window_locked)
-				{
-						window_locked = TRUE;
-				}
-				else
-				{
-						window_locked = FALSE;
-				}
 				
 
     }

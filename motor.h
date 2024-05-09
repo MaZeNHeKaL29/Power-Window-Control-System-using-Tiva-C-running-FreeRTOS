@@ -4,7 +4,7 @@
 
 #define MAX_DUTY_CYCLE	4999
 
-#define DEFAULT_DUTY_CYCLE	4500
+#define DEFAULT_DUTY_CYCLE	4200
 
 
 
